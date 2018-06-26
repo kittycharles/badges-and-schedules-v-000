@@ -8,10 +8,17 @@ def batch_badge_creator(attendees)
   end
 end
 
+# def assign_rooms(attendees)
+#   counter=0
+#   attendees.each do |name|
+#     counter+=1
+#     return "Hello, #{name}! You'll be assigned to room #{counter}!"
+#   end
+# end
 def assign_rooms(attendees)
-  counter=0
-  attendees.each do |name|
-    counter+=1
-    return "Hello, #{name}! You'll be assigned to room #{counter}!"
+  room=0
+  attendees.collect do |name|
+    room+=1
+    "Hello, #{name}! You'll be assigned to room #{room}!"
   end
 end
